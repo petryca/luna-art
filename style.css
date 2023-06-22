@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+
+}
+
+header {
+    height: 100vh;
+    background-image: url(media/luna-art.jpg);
+    background-size: cover;
+    background-position: bottom right;
+}
+
+#ham {
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transform: scale(0.8);
+    cursor: pointer;
+    z-index: 99;
+}
+
+#ham span {
+    background-color: #fff;
+    display: block;
+    height: 9px;
+    width: 100%;
+    position: absolute;
+    border-radius: 9px;
+    transition: all 0.3s ease-out;
+}
+
+#ham span:nth-child(1) { top: 0; }
+#ham span:nth-child(2) { top: 18px; }
+#ham span:nth-child(3) { top: 18px; }
+#ham span:nth-child(4) { top: 36px; }
+
+#ham.x span:nth-child(1) { top: 18px; opacity: 0; }
+#ham.x span:nth-child(2) { transform: rotate(45deg); }
+#ham.x span:nth-child(3) { transform: rotate(-45deg); }
+#ham.x span:nth-child(4) { top: 18px; opacity: 0; }
+
+nav {
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0,0,0,0.5);
+    height: 100svh;
+    position: relative;
+    transition: all 0.3s;
+}
+
+nav.open {
+    opacity: 1;
+    visibility: visible;
+}
