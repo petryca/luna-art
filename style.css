@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -230,4 +230,129 @@ section {
     background-image: url(media/pin.png);
     background-position: center;
     background-size: contain;
+    cursor: pointer;
+}
+
+.popup {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.mapboxgl-popup-close-button {
+    outline: none;
+}
+
+#form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#form div {
+    margin-bottom: 0.5rem;
+}
+
+label {
+    cursor: pointer;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+#email, #sender, #message {
+    width: 100%; 
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+    background-color: #222;
+    border: 1px solid #454545;
+    color: #fff;
+    border-radius: 4px;
+}
+
+#email:focus, #sender:focus, #message:focus {
+    outline: none;
+    border-color: #999797;
+}
+
+#message {
+    height: 10rem;
+    resize: none;
+}
+
+#form button {
+    font-family: inherit;
+    padding: 1rem 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid #454545;
+    background-color: #555;
+    color: #aaa;
+    display: block;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 4px;
+}
+
+#form button:hover {
+    transform: scale(1.2);
+}
+
+#form #btnsubmit {
+    background-color: #0e7305;
+}
+
+#form div:last-child {
+    display: flex;
+    justify-content: end;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+::placeholder {
+    color: #3c3c3c;
+}
+
+.validate #email:invalid,
+.validate #sender:invalid,
+.validate #message:invalid {
+    border-color: #900;
+    animation-name: shake;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-duration: 100ms;
+    animation-iteration-count: 6;
+}
+
+#email:valid,
+#sender:valid,
+#message:valid {
+    background-color: #eee;
+    color: #1a1a1a;
+}
+
+#response {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1a1a1a;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+@keyframes shake {
+    from {
+        transform: translate(1rem, 0);
+    }
+    to {
+        transform: translate(-1rem, 0);
+    }
 }
