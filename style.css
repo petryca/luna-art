@@ -23,6 +23,10 @@ header {
     overflow: hidden;
 }
 
+header p {
+    position: relative;
+}
+
 header::before {
     content: "";
     background-image: url(media/luna-art.jpg);
@@ -93,9 +97,12 @@ nav {
     opacity: 0;
     visibility: hidden;
     background-color: rgba(0,0,0,0.5);
-    height: 100svh;
-    position: relative;
     transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,7 +131,7 @@ nav a:hover {
     transform: scale(1.2);
 }
 
-h1 {
+header h1 {
     position: absolute;
     top: 1rem;
     left: 1rem;
@@ -134,17 +141,26 @@ h1 {
     font-size: 3rem;
     line-height: 1;
     letter-spacing: -1px;
-
 }
 
-h1 span {
+header h1 span {
     font-weight: 300;
 }
 
 section {
     position: relative;
     background-color: #1a1a1a;
-    padding: 4rem;
+    padding: 4rem 2rem 0 2rem;
+}
+
+section h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
 }
 
 #about {
@@ -220,8 +236,31 @@ section {
     
 }
 
+#grid div {
+    transform: translate(0, 8rem);
+    opacity: 0;
+}
+
+#grid div.inviewport {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+#grid div:nth-child(odd) {
+    transition: all 0.6s;
+}
+
+#grid div:nth-child(even) {
+    transition: all 1.2s;
+}
+
 #studio {
-    height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#mymap {
+    height: 80vh;
 }
 
 .pin {
@@ -240,6 +279,10 @@ section {
 
 .mapboxgl-popup-close-button {
     outline: none;
+}
+
+#contact {
+    padding-bottom: 4rem;
 }
 
 #form {
@@ -350,4 +393,32 @@ label {
     to {
         transform: translate(-1rem, 0);
     }
+}
+
+footer {
+    background-color: #333;
+    height: auto;
+    padding: 2rem;
+    color: #eee;
+    position: relative;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly
+}
+
+footer img {
+    display: block;
+    width: 3rem;
+    transition: all 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.4);
+}
+
+footer a {
+    text-decoration: none;
 }

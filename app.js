@@ -1,4 +1,3 @@
-
 ham.addEventListener('click', () => {
     ham.classList.toggle('x');
     nav.classList.toggle('open');
@@ -9,7 +8,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicGV0cnljYSIsImEiOiJjazd6eGFxajEwOW5rM2RydW5rb
 let gps = [14.439972261923986, 50.078594071059776];
 
 let map = new mapboxgl.Map({
-    container: 'studio',
+    container: 'mymap',
     center: gps,
     zoom: 15,
     style: 'mapbox://style/mapbox/dark-v10'
@@ -69,3 +68,15 @@ btnsubmit.addEventListener('click', () => {
 btnreset.addEventListener('click', () => {
     form.classList.remove('validate');
 });
+
+const observerOptions = {
+    rootMargin: '1000px 0px -200px 0px',
+    threshold: 0
+};
+
+const observe = entries => entries.forEach(entry => {
+    entry.target.classList.toggle('inviewport', entry.isIntersecting);
+});
+
+const obs = new IntersectionObserver(observe, observerOptions);
+document.querySelectorAll('#grid div').forEach(el => obs.observe(el));
