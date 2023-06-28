@@ -42,6 +42,27 @@ form.addEventListener('submit', (evnt) => {
 });
 
 btnsubmit.addEventListener('click', () => {
+
+    let isValid = (email.checkValidity() && sender.checkValidity() && message.checkValidity());
+
+    if (!isValid) {
+
+        const frames = [
+            { transform: 'translate(0, 0)' },
+            { transform: 'translate(1rem, 0)' },
+            { transform: 'translate(-1rem, 0)' }
+        ];
+
+        const timing = {
+            duration: 100,
+            iterations: 6,
+            direction: 'alternate',
+            easing: 'ease-in-out'
+        }
+
+        form.animate(frames, timing);
+    }
+
     form.classList.add('validate');
 });
 

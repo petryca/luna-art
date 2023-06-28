@@ -319,11 +319,6 @@ label {
 .validate #sender:invalid,
 .validate #message:invalid {
     border-color: #900;
-    animation-name: shake;
-    animation-timing-function: ease-out;
-    animation-direction: alternate;
-    animation-duration: 100ms;
-    animation-iteration-count: 6;
 }
 
 #email:valid,
