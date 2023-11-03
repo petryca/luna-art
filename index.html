@@ -1,104 +1,99 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luna Art</title>
-    <link rel="stylesheet" href="style.css">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet'>
-    <script src="app.js" defer></script>
-</head>
-<body>
-    <header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luna Art</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,700,0,0">
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+<script defer src="app.js"></script>
 
-        <nav id="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#studio">Studio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <div id="ham">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
 
-        <h1>Luna<span>Art</span></h1>
+<header>
 
-        <a href="#gallery" class="material-symbols-rounded" id="arrow">arrow_circle_down</a>
-
-    </header>
-
-    <section id="about">
-        <img src="media/painting.jpg">
-        <h1>About Luna</h1>
-        <p>Minim amet sint anim eu dolore ut magna deserunt voluptate est pariatur sit ullamco qui. Magna laborum Lorem do cupidatat exercitation do pariatur pariatur commodo aliqua do amet do ullamco. Sint adipisicing laborum aliquip exercitation Lorem exercitation occaecat consectetur amet officia aliquip labore adipisicing. Incididunt irure officia aliquip consectetur consequat. Excepteur consequat et nostrud ipsum aute ipsum esse enim commodo. Deserunt ex aute officia mollit irure adipisicing laboris sint.</p>
-    </section>
-
-    <section id="gallery">
-        <h1>Luna's Art</h1>
-        <div id="grid">
-            <div><img src="media/luna-grid-1.jpg"></div>
-            <div><img src="media/luna-grid-2.jpg"></div>
-            <div><img src="media/luna-grid-3.jpg"></div>
-            <div><img src="media/luna-grid-4.jpg"></div>
-            <div><img src="media/luna-grid-5.jpg"></div>
-            <div><img src="media/luna-grid-6.jpg"></div>
-            <div><img src="media/luna-grid-7.jpg"></div>
-            <div><img src="media/luna-grid-8.jpg"></div>
-            <div><img src="media/luna-grid-9.jpg"></div>
-            <div><img src="media/luna-grid-10.jpg"></div>
-            <div><img src="media/luna-grid-11.jpg"></div>
-            <div><img src="media/luna-grid-12.jpg"></div>
-            <div><img src="media/luna-grid-13.jpg"></div>
-            <div><img src="media/luna-grid-14.jpg"></div>
-        </div>
-    </section>
-
-    <section id="studio">
-        <h1>Luna's Studio</h1>
-        <div id="mymap"></div>
-    </section>
-
-    <section id="contact">
-        <h1>Contact Luna</h1>
-        <form id="form">
-            <div>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="me@email.com" required>
-            </div>
-            <div>
-                <label for="sender">Name</label>
-                <input type="text" name="sender" id="sender" minlength="5" placeholder="Your Name" required>
-            </div>
-            <div>
-                <label for="message">Message</label>
-                <textarea name="message" id="message" minlength="5" maxlength="200" placeholder="Hello..." required></textarea>
-            </div>
-            <div>
-                <button type="reset" id="btnreset">Reset</button>
-                <button type="submit" id="btnsubmit">Submit</button>
-            </div>
-        </form>
-        <div id="response">
-            <div class="material-symbols-rounded" id="check">check</div>
-            <p>Thank you, your message has been sent!</p>
-        </div>
-    </section>
-
-    <footer>
+    <nav id="nav">
         <ul>
-            <li><a href=""><img src="media/icon-facebook.svg"></a></li>
-            <li><a href=""><img src="media/icon-instagram.svg"></a></li>
-            <li><a href=""><img src="media/icon-twitter.svg"></a></li>
-            <li><a href=""><img src="media/icon-youtube.svg"></a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#studio">Studio</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-  </footer>
-</body>
-</html>
+    </nav>
+
+    <div id="menu" class="material-symbols-rounded">
+        menu
+    </div>
+
+    <h1>Luna<span>Art</span></h1>
+
+    <a href="#gallery" class="material-symbols-rounded" id="arrow">arrow_circle_down</a>
+
+</header>
+
+<section id="about">
+    <img src="media/painting.jpg">
+    <h1>About Luna</h1>
+    <p>Minim amet sint anim eu dolore ut magna deserunt voluptate est pariatur sit ullamco qui. Magna laborum Lorem do cupidatat exercitation do pariatur pariatur commodo aliqua do amet do ullamco. Sint adipisicing laborum aliquip exercitation Lorem exercitation occaecat consectetur amet officia aliquip labore adipisicing. Incididunt irure officia aliquip consectetur consequat. Excepteur consequat et nostrud ipsum aute ipsum esse enim commodo. Deserunt ex aute officia mollit irure adipisicing laboris sint.</p>
+</section>
+
+<section id="gallery">
+    <h1>Luna's Art</h1>
+    <div id="grid">
+        <div><img src="media/luna-grid-1.jpg"></div>
+        <div><img src="media/luna-grid-2.jpg"></div>
+        <div><img src="media/luna-grid-3.jpg"></div>
+        <div><img src="media/luna-grid-4.jpg"></div>
+        <div><img src="media/luna-grid-5.jpg"></div>
+        <div><img src="media/luna-grid-6.jpg"></div>
+        <div><img src="media/luna-grid-7.jpg"></div>
+        <div><img src="media/luna-grid-8.jpg"></div>
+        <div><img src="media/luna-grid-9.jpg"></div>
+        <div><img src="media/luna-grid-10.jpg"></div>
+        <div><img src="media/luna-grid-11.jpg"></div>
+        <div><img src="media/luna-grid-12.jpg"></div>
+        <div><img src="media/luna-grid-13.jpg"></div>
+        <div><img src="media/luna-grid-14.jpg"></div>
+    </div>
+</section>
+
+<section id="studio">
+    <h1>Luna's Studio</h1>
+    <div id="mymap"></div>
+    <div id="anothermap"></div>
+</section>
+
+<section id="contact">
+    <h1>Contact Luna</h1>
+    <form id="form">
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="me@email.com" required>
+        </div>
+        <div>
+            <label for="sender">Name</label>
+            <input type="text" name="sender" id="sender" minlength="5" placeholder="Your Name" required>
+        </div>
+        <div>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" minlength="5" maxlength="200" placeholder="Hello..." required></textarea>
+        </div>
+        <div>
+            <button type="reset" id="btnreset">Reset</button>
+            <button type="submit" id="btnsubmit">Submit</button>
+        </div>
+    </form>
+    <div id="response">
+        <div class="material-symbols-rounded" id="check">check</div>
+        <p>Thank you, your message has been sent!</p>
+    </div>
+</section>
+
+<footer>
+    <ul>
+        <li><a href=""><img src="media/icon-facebook.svg"></a></li>
+        <li><a href=""><img src="media/icon-instagram.svg"></a></li>
+        <li><a href=""><img src="media/icon-twitter.svg"></a></li>
+        <li><a href=""><img src="media/icon-youtube.svg"></a></li>
+    </ul>
+</footer>

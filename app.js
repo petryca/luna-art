@@ -1,7 +1,15 @@
-ham.addEventListener('click', () => {
-    ham.classList.toggle('x');
+// MENU
+
+menu.addEventListener('click', () => {
+    if (menu.textContent == 'close') {
+        menu.textContent = 'menu';
+    } else {
+        menu.textContent = 'close';
+    }
     nav.classList.toggle('open');
 });
+
+// MAP
 
 mapboxgl.accessToken = 'pk.eyJ1IjoicGV0cnljYSIsImEiOiJjazd6eGFxajEwOW5rM2RydW5rb3pzcmtiIn0.eFkGZsTPafVGw_E9bXI8aA';
 
@@ -28,6 +36,8 @@ new mapboxgl.Marker({
     element: elm,
     anchor: 'bottom'
 }).setLngLat(gps).addTo(map).setPopup(popup);
+
+// FORM
 
 form.addEventListener('submit', (evnt) => {
     evnt.preventDefault();
@@ -68,6 +78,8 @@ btnsubmit.addEventListener('click', () => {
 btnreset.addEventListener('click', () => {
     form.classList.remove('validate');
 });
+
+// GRID
 
 const observerOptions = {
     rootMargin: '1000px 0px -200px 0px',
